@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JARRAH Rental - Cars</title>
+  <link rel="stylesheet" href="car.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href ="home 1.html">Home</a></li>
+        <li><a href="car 2.html">Cars</a></li>
+        <li><a href="aboutpage 3.html">About</a></li>
+        <li><a href="contact 4.html">Contact</a></li>
+      </ul>
+    </nav>
+     <h1>JARRAH Rental</h1>
+  <main>
+    <h1>Our Collection</h1>
+    <input type="text" id="searchInput" placeholder="Search By Brand Or Model" style="margin:20px ; padding:10px">
+    <select id ="filterBrand">
+      <option value ="brands">^</option>
+      <option value ="Mercedes">Mercedes</option>
+     <option value ="BMW">BMW</option>
+      <option value ="Kia">Kia</option>
+      <option value ="Toyota">Toyota</option>
+       <option value ="Nissan">Nissan</option>
+         <option value ="Audi">Audi</option>
+           <option value ="Volkswagen">Volkswagen</option>
+            <option value ="Ferrari">Ferrari</option>
+    </select>
+    <div class="cars-grid">
+      <div class="car-card" data-brand="Mercedes-Benz">
+        <img src="Mercedes-Benz-E63_AMG-2017-Front.8b39fdf0.jpg" alt="Mercedes Benz ">
+        <p>Brand: Merceds-Benz</p> 
+        <p>Model:E-class 63 (2017)</p>
+        <P>Price : 100$/day</P>
+        <p>Engine options: 4.0-liter V8 Biturbo </p>
+        <p>Power: 612 HorsePower</p>
+        <p>Performance tech:
+        4MATIC+ AWD system (fully variable torque distribution)
+        Drift Mode (rear-wheel drive only for drifting)
+         Adaptive air suspension (AMG Ride Control)
+         High-performance braking system (optional carbon ceramic)</p>
+         <p></p>
+        <a class="btn" href="#" onclick="selectcar('Mercedes-Benz E63'); return false;">Book Now</a>
+      </div>
+      <div class="car-card" data-brand="BMW">
+        <img src="large_23a18def-f064-483a-ab04-d9f177d92abc.webp" alt="BMW">
+        <P>Brand: BMW</P>
+        <p>Model: BMW M5 (2017)</p>
+        <p>price: 200$/day</p>
+        <p>Engine: 4.4L V8 twin-turbo</p>
+        <P>Power: 600 HorsePower</P>
+        <p>Performance Tech
+          Adaptive suspension (very advanced)
+          Launch control
+          Active M differential (better traction)
+          F90 adds:
+          AWD → better grip
+          Switchable RWD mode (for drifting)
+        </p>
+        <a class="btn" href="#" onclick="selectcar('BMW M5'); return false;">Book Now</a>
+      </div>
+      <div class ="car-card" data-brand="Kia">
+        <img src="1 Kia Picanto review 20205 UK.jpg" alt="Kia Picanto">
+        <p>Brand: Kia </p>
+        <P>Model Kia picanto (2026)</P>
+        <p>Price: 20$/day</p>
+        <p>Engine:
+        1.0L 3-cylinder petrol (very fuel-efficient)
+        <P>1.2L 4-cylinder petrol (more power)
+        Manual or automatic transmission</P>
+        <a class="btn" href="#" onclick="selectcar('Kia Picanto');return false;">Book Now</a>
+      </div>
+      <div class = "car-card" data-brand="Toyota">
+        <img src="2014_Toyota_Corolla_Test_Drive_Review_summaryImage.jpeg" alt="Toyota Corolla">
+        <p>Brand: Toyota</p>
+        <p>Model: Toyota Corolla S (2014)</p>
+        <P>Price: 30$/day</P>
+        <P>Engine:
+         1.8L 4-cylinder
+        Power: 132 hp
+        Torque: 128 lb-ft
+        Drive: Front-wheel drive
+        Transmission:
+            CVT automatic
+            or 6-speed manual
+        </P>
+         <a class="btn" href="#" onclick="selectcar('Toyota Corolla');return false;">Book Now</a>
+      </div>
+      <div class = "car-card" data-brand="Nissan">
+        <img src="nissan-micra-front-driving-three-quarters.jpg" alt="Nissan Micra">
+        <P>Brand : Nissan</P>
+        <p>Model: Nissan Micra (2013)</p>
+        <p>price: FREE FOR 7 DAYS</p>
+        <P>Engine: 1.2L 3-cylinder petrol
+            80 hp (basic version)</P>
+            <P>1.2L supercharged (DIG-S)
+            ~ 98 hp (more powerful)</P>
+            <a class="btn" href="#" onclick="selectcar('Nissan Micra');return false;">Book Now</a>
+      </div>
+      <div class = "car-card" data-brand="Toyota">
+        <img src ="2025-Toyota-RAV4-Hybrid-XSE-Exterior.webp" alt="Toyta RAV4">
+        <p>Brand: Toyota</p>
+        <p>Model: Toyota RV4 XL(2025) </p>
+        <p>Price: 50$/day</p>
+        <p>Engine: 2.5L 4-cylinder
+           Power: 203 hp
+          Transmission: 8-speed automatic
+          Drive: FWD or AWD</p>
+          <a class="btn" href="#" onclick="selectcar('Toyota RV4');return false;">Book Now</a>
+      </div>
+      <div class ="car-card" data-brand="Audi">
+        <img src="2019-audi-q3.jpg" alt ="Audi Q3">
+        <P>Brand : Audi</P>
+        <p>Model : Audi Q3 (2019)</p>
+        <P>Price: 70$/day</P>
+        <p>Engine:
+           2.0L turbocharged 4-cylinder
+          Power: 228 hp
+          Torque: 258 lb-ft
+          Transmission: 8-speed automatic
+          Drive: Quattro AWD (standard)</p>
+          <a class="btn" href="#" onclick="selectcar('Audi Q3');return false;">Book Now</a>
+    </div>
+    <div class="car-card" data-brand="Mercedes-Benz">
+      <img src="14395_st0640_116.webp" alt="Mercedes-Benz">
+      <p>Brand: Mercedes-Benz</p>
+      <p>Model : Mercedes-Benz 63 (2020)</p>
+      <P>Price : 300$/day</P>
+      <P>Engine: 4.0L twin-turbo V8
+        Power:577 hp</P>
+        <a class="btn" href="#" onclick="selectcar('Mercedes-Benz G63');return false;">Book Now</a>
+    </div>
+    <div class ="car-card" data-brand="Volkswagen">
+      <img src="2017-Volkswagen-Tiguan-162TSI-279776.webp" alt="Volkswagen">
+      <p>Brand: Volkswagen</p>
+      <P>Model : Volkswagen Tiguan (2019)</P>
+      <P>Price: 70$/day</P>
+      <P>Engine: 2.0L turbocharged 4-cylinder
+        Power: 184 hp
+        Torque: 221 lb-ft
+        Transmission: 8-speed automatic
+        Drive: FWD or AWD (4Motion)</P>
+        <a class="btn" href="#" onclick="selectcar('Volkswagen Tiguan');return false;">Book Now</a>
+      </div>
+      <div class = "car-card" data-brand="Ferrari">
+        <img src = "2022-ferrari-812-competizione-main.jpg" alt="Ferrari">
+        <p>Brand : Ferrari</p>
+        <P>Model : Ferrari competizione (2022)</P>
+        <P>Price : 700$/day</P>
+        <P>Engine: 6.5L V12 (naturally aspirated)
+          Power: ~830 hp
+          Redline: 9,500 rpm
+          0–100 km/h: ~2.85 sec
+          Top speed: ~340 km/h</P>
+          <a class="btn" href="#" onclick="selectcar('Ferrari Competizione'); return false;">Book Now</a>
+      </div>
+  </main>
+  <div id="notification" calss="notification"></div>
+  <footer>
+  <p> Copyright&copy;JARRAH RENTAL CARS 2026</p>
+  </footer>
+  <script>
+    
+    const searchInput = document.getElementById("searchInput");//get the input from user//
+    const filterBrand = document.getElementById("filterBrand");//makeing fiter based on input//
+    const cars = document.querySelectorAll(".car-card");//introduce the cars based on filter and input of the user//
+    //function filter//
+    function filterCars(){
+      const searchValue = serachInput.value.toLowerCase();//change input to lowercase//
+      const selectedBrand = filterBrand.value;
+      cars.forEach(car=> {
+        const text = car.textContent.toLowerCase();//show all inforamtion about the car after search and filter//
+        const brand = car.getAttribute("data-brand");//show (price etc...)//
+        const matchesSearch = text.includes(searchValue);
+        const matchesFilter = selectedBrand ==="all" || brand === selectedBrand;
+        if(matchesSearch && matchesFilter){ // means if the searched car equals to the filter choosen//
+          car.style.display = "block";// SHOW THE CAR//
+        }
+          else{// MEANS THAT THE SEARCHED CAR DONEST MATCHS THE FILTER CHOOSEN//
+            car.style.display = "none";// it will not diplay any Car!!!!!///
+          }
+      });
+    }
+      serachInput.addEventlisterner("keyup", filterCars);
+      filterBrand.addEventlisterner("change", filterCars);
+    
+ </script>
+ <script>
+  
+  function selectcar(car){
+    localStorage.setItem("selectedcar", car);
+      alert("Are you sure you want to book this car ??  : " + car);
+    window.location.href="contract.html";
+  }
+    
+ </script>
+</body>
+</html>

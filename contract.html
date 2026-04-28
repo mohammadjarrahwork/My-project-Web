@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract</title>
+    <link rel="stylesheet" href="car.css">
+</head>
+<body>
+      <div style ="text-align: center; font-weight: bold; font-size: 20px;">
+        JARRAH Rental
+        Contract
+        </div>
+    <form onsubmint="generatecontract(); return false;">
+        <lable> User (Full Name):</lable>
+        <input type="text" id ="name" placeholder="Full name" required>
+        <lable>Car Model:</lable>
+        <input type="text" id ="car" placeholder="Car model">
+        <label>Pick-up Date: </label>
+        <input type ="date" id="pickup" required>
+        <label>Return Date:</label>
+        <input type = "date" id="returndate" required>
+        <lable>Number oF Days:</lable>
+        <input type="number" id="days" placeholder="Number of days" required>
+        <button type ="submit" onclick="alert('Thank you !\n Your contract has been successfully.')">Generatecontract</button>
+        <p id ="result"></p>
+        </form>
+      <form
+     <div id = "contractOutput" ; style="text-align: center;">
+     <button type ="submit" onclick="window.print()">Print Contract</button>
+     </form>
+     <footer><p> Copyright&copy;JARRAH RENTAL CARS 2026</p></footer>
+ <script> /*JS CODE*/
+    function generatecontract(){
+        let name= document.getElementById("name").value;// getting name on the user//
+        let car= document.getElementById("car").value;//getting the car that the user book//
+        let pickup= document.getElementById("pickup").value;//generate the pickupdate when the user take the car//
+        let returndate=documnet.getElementById("returndate").value;//generate the returndate the the user must return the carr//
+            if(!name || !car || !pickup || !returndate){
+                alert("plese fill all fields !!!");
+                    return;
+            }
+        let contract= `
+        <div style = "border: 2px solid #333;
+         padding:15px; margin-top:20px; text-align:left;">
+            <h3>Rental Agreemnets</h3>
+            <p><strong>This agreemnet is made between </strong> <b>${name}</b> <strong> and JARRAH RENTAL.</strong></p>
+            <p><strong>The customer agrees to rent the Car :</strong> <b>${car}</b>.</p>
+            <p><strong>Return Date:</strong></b>${returndate}</p>
+            <p><strong>Signature:</strong>________________________</p>
+            `;
+            document.getElementById("contractOutput").innerHTML = contract;
+    }
+ </script>
+ <script>
+    
+    window.onload =function(){
+        let car = localStorage.getItem("selectedcar");
+        if(car){
+            documnet.getElementById("car").value=car;
+        }
+    }
+ </script>
+   
+ <script>
+    
+    function calculatePrice(){
+        let car= localStorage.getItem("selectedcar");
+        let days=document.getElementById("days").value;
+        let priceperday;
+        if(car === "Mercedes E63"){
+            priceperday =100;
+        }
+        else if(car === "BMW M5"){
+            priceoerday=200;
+        }
+        else if(car === "Kia Picanto"){
+            priceperday=20;
+        }
+        else if(car=== "Toyota Corolla"){
+            priceperday=30;
+        }
+        else if (car==="Nissan"){
+            priceperday=0;
+        }
+        else if(car==="Toyota RV4"){
+            priceperday=50;
+        }
+        else if (car==="Audi"){
+            priceperday=70;
+        }
+        else if (car=== "Mercedes G63"){
+            priceperday=300;
+        }
+        else if(car=== "Volkswagen"){
+            priceperday=70;
+        }
+        else if(car === "Ferrari"){
+            priceperday=700;
+        }
+        let total=days*priceperday;
+        documnet.getElementById("totalprice").innerHtml = "Total price: $" + total;
+    }
+ </script>    
+</body>
+</html>
